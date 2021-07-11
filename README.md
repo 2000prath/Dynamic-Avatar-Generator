@@ -1,5 +1,5 @@
 
-# Dynamic Profile Image Generator
+# Dynamic Avatar Generator
 This library will help you to generate profile image for newly registered user on your application, like GitHub create profile picture for new users E.g. <br>
  <br>
 ![75605781 (2)](https://user-images.githubusercontent.com/40172813/125158648-02982e00-e190-11eb-912d-2c55b1051019.png)
