@@ -16,11 +16,11 @@ from avatar import AvatarGenerator
 obj = AvatarGenerator()
 img = obj.CreateAvatar() 
 ```
-## Advance parameters `obj.CreateAvatar(row_columns,pixel_size,background_color)`<br>
-`@row_columns` Integer, block size of row and columns, default `5`<br>
-`@pixel_size` Integer, pixel size, default `300`<br>
-`@background_color` String, background color of blocks in image, default `lightgrey`<br>
-`@border` Boolean, `True` to add border to image, `False` to without border image, default `True` <br><br>
+### Advance parameters `obj.CreateAvatar(row_columns,pixel_size,background_color)`<br>
+`@row_columns` `Integer`, block size of row and columns, default `5`<br>
+`@pixel_size` `Integer`, pixel size, default `300`<br>
+`@background_color` `String`, background color of blocks in image, default `lightgrey`<br>
+`@border` `Boolean`, `True` to add border to image, `False` to without border image, default `True` <br><br>
 
 
 `img.show()` to open generated image <br>
