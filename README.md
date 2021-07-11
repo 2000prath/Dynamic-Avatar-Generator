@@ -7,6 +7,8 @@ This library will help you to generate profile image for newly registered user o
 
 ## Generated images
 ![generatedimg](https://user-images.githubusercontent.com/40172813/125158557-9a494c80-e18f-11eb-956a-d49f42a6a6db.png)
+![New Project (3)](https://user-images.githubusercontent.com/40172813/125189848-d5af4e00-e257-11eb-8b22-acc3b7b0c0f9.png)
+
 
 ## Usage
 ```python
