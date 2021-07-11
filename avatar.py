@@ -1,14 +1,14 @@
 __author__ = '2000prath@gmail.com'
 
-from PIL import Image,ImageEnhance
+from PIL import Image,ImageEnhance,ImageOps
 import numpy as np
 import random
 import time
 
-class GenerateImage:
+class AvatarGenerator:
     """
-    obj = GenerateImage()\n
-    img = obj.BitImage(5,300,'lightgrey')\n
+    obj = AvatarGenerator()\n
+    img = obj.CreateAvatar(5,300,'lightgrey')\n
     str_bs64 = obj.toBase64(img)\n
     img.show() #use to open image\n
     img.save('image.png') #to save image\n
@@ -51,11 +51,13 @@ class GenerateImage:
         return array
 
 
-    def BitImage(self,xy_axis,pixels,background_color):
+    def CreateAvatar(self,xy_axis=5,pixels=300,background_color='lightgrey',border=True,border_width=25):
         """
         @xy_axis : Row and Columns, it should be same Eg. 5 for(5*5 matrix)\n
         @pixels : Use less pixels to minimize final image siz Eg. 300 e\n
-        @background_color : Specify the color of background Eg. white, grey, lighgrey
+        @background_color : Specify the color of background Eg. white, grey, lighgrey\n
+        @border : Boolean - True: add border, False: no border\n
+        @border_width : size
         """
         #to get the image x and y should be same
         column_row = xy_axis
@@ -81,5 +83,9 @@ class GenerateImage:
                     left = int((j*(pixel_x_y/column_row))+(pixel_x_y/column_row))
                     bottom = int((i*(pixel_x_y/column_row))+(pixel_x_y/column_row))
                     img.paste( (red,green,blue), [right ,top,left,bottom])
+        if border:
+            img = ImageOps.expand(img,border=border_width,fill=background_color)
         return img
+
+
 

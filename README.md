@@ -10,18 +10,19 @@ This library will help you to generate profile image for newly registered user o
 
 ## Usage
 ```python
-import avatar
+from avatar import AvatarGenerator
 
 #initialize image generator
-obj = GenerateImage()
-
-#image block size with rows and columns
-row_columns = 5
-pixel_size = 300
-background_color = 'lightgrey'
-img = obj.BitImage(row_columns,pixel_size,background_color) 
+obj = AvatarGenerator()
+img = obj.CreateAvatar() 
 ```
- 
+## Advance parameters `obj.CreateAvatar(row_columns,pixel_size,background_color)`<br>
+`@row_columns` Integer, block size of row and columns, default `5`<br>
+`@pixel_size` Integer, pixel size, default `300`<br>
+`@background_color` String, background color of blocks in image, default `lightgrey`<br>
+`@border` Boolean, `True` to add border to image, `False` to without border image, default `True` <br><br>
+
+
 `img.show()` to open generated image <br>
 `img.save('image.png')` to save image with image name <br>
 `obj.toBase64(img)` to get Base64 value of generated image <br>
